@@ -272,6 +272,25 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#pegawai-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-person-badge"></i><span>Pegawai</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="pegawai-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="pegawai-tambah.html" class="active">
+              <i class="bi bi-circle"></i><span>Tambah Data Pegawai</span>
+            </a>
+          </li>
+          <li>
+            <a href="pegawai.html" >
+              <i class="bi bi-circle"></i><span>List Data Pegawai</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Pegawai Nav -->
+
+      <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#pasien-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-person-fill"></i><span>Pasien</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -421,94 +440,155 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Contact</h1>
+      <h1>Tambah Data Pegawai</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Pages</li>
-          <li class="breadcrumb-item active">Contact</li>
+          <li class="breadcrumb-item">Forms</li>
+          <li class="breadcrumb-item active">Elements</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section contact">
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
 
-      <div class="row gy-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Isi data Pegawai</h5>
 
-        <div class="col-xl-6">
+              <!-- General Form Elements -->
+              <form>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Nama</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">NIK</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Pendidikan Terakhir</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected disabled>Pilih Pendidikan Terakhir</option>
+                      <option value="1">SMA</option>
+                      <option value="2">Sarjana (S1)</option>
+                      <option value="3">Magister (S2)</option>>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Pegawai Bagian</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected disabled>Pilih Jenis Pegawai</option>
+                      <option value="3">Apoteker</option>>
+                      <option value="1">Resepsionis</option>
+                      <option value="2">Perawat</option>
+                      <option value="3">Keuangan</option>>
+                      <option value="3">Kebersihan</option>>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Jadwal Kerja:</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected disabled>Pilih Jadwal Kerja</option>
+                      <option value="1">Senin</option>
+                      <option value="2">Selasa</option>
+                      <option value="3">Rabu</option>>
+                      <option value="3">Kamis</option>>
+                      <option value="3">Jumat</option>>
+                      <option value="3">Sabtu</option>>
+                      <option value="3">Minggu</option>>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Jam Kerja</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected disabled>Pilih Jam Kerja</option>
+                      <option value="1">Pagi (00:00 - 05:59)</option>
+                      <option value="2">Siang (06:00 - 11:59)</option>
+                      <option value="3">Sore (12:00 - 17:59)</option>
+                      <option value="4">Malam (18:00 - 11:59)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Nomor Telepon (+62)</label>
+                  <div class="col-sm-10">
+                    <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}[0-9]{4}[0-9]{4}[0-9]{}" maxlength="13">
+                    <small>Contoh: 81270779112</small>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputDate" class="col-sm-2 col-form-label">Tanggal Lahir:</label>
+                  <div class="col-sm-10">
+                    <input type="date" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Alamat</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Kecamatan</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected disabled>Pilih Kecamatan</option>
+                      <option value="1">Aek Songsongan</option>
+                      <option value="2">Kota Kisaran Timur</option>
+                      <option value="3">Tanjung Balai</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Kabupaten</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected disabled>Pilih Kabupaten / Kota</option>
+                      <option value="1">Kabupaten Deli Serdang</option>
+                      <option value="2">Kabupaten Nias</option>
+                      <option value="3">Kabupaten Asahan</option>
+                      <option value="4">Kota Medan</option>
+                      <option value="5">Kota Binjai</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control">
+                  </div>
+                </div>
 
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="info-box card">
-                <i class="bi bi-geo-alt"></i>
-                <h3>Alamat</h3>
-                <p>Jl. Kuali Gg. Tertib No. 8J, Medan Petisah</p>
-              </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Aksi</label>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn rounded-pill btn-primary">Kirim</button>
+                    <button type="reset" class="btn rounded-pill btn-secondary">Reset</button>
+                  </div>
+                </div>
+
+              </form><!-- End General Form Elements -->
+
             </div>
-            <div class="col-lg-6">
-              <div class="info-box card">
-                <i class="bi bi-telephone"></i>
-                <h3>Call Us</h3>
-                <p>+62 821 6661 5433<br>+62 822 6160 6336</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="info-box card">
-                <i class="bi bi-envelope"></i>
-                <h3>Email</h3>
-                <p>metromatika@gmail.com<br>official@metromatika.com</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="info-box card">
-                <i class="bi bi-clock"></i>
-                <h3>Jam Buka</h3>
-                <p>Senin - Friday<br>07:00 wib - 23:00 wib</p>
-                <p>Sabtu - Minggu<br>07:00 wib - 20:00 wib</p>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-xl-6">
-          <div class="card p-4">
-            <form action="forms/contact.php" method="post" class="php-email-form">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Nama" required>
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Email" required>
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subjek" required>
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Pesan" required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Kirim Pesan</button>
-                </div>
-
-              </div>
-            </form>
           </div>
 
         </div>
 
       </div>
-
     </section>
 
   </main><!-- End #main -->

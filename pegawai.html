@@ -272,6 +272,25 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#pegawai-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-person-badge"></i><span>Pegawai</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="pegawai-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="pegawai-tambah.html">
+              <i class="bi bi-circle"></i><span>Tambah Data Pegawai</span>
+            </a>
+          </li>
+          <li>
+            <a href="pegawai.html" class="active">
+              <i class="bi bi-circle"></i><span>List Data Pegawai</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Pegawai Nav -->
+
+      <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#pasien-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-person-fill"></i><span>Pasien</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -421,94 +440,95 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Contact</h1>
+      <h1>Daftar Pegawai</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Pages</li>
-          <li class="breadcrumb-item active">Contact</li>
+          <li class="breadcrumb-item">Tables</li>
+          <li class="breadcrumb-item active">Data</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section contact">
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
 
-      <div class="row gy-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+              <div class="row">
+                <div class="row">
+                    <div class="col-sm-3" style="width: 10rem;">
+                      <select class="form-select card-title" aria-label="Default select example">
+                        <option selected disabled>Pegawai</option>
+                        <option value="3">Apoteker</option>>
+                        <option value="1">Resepsionis</option>
+                        <option value="2">Perawat</option>
+                        <option value="3">Keuangan</option>>
+                        <option value="3">Kebersihan</option>>
+                      </select>
+                    </div>
+                  </div>
+              </div>
+            </h5>
 
-        <div class="col-xl-6">
+              <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Nomor Handphone</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Tio Siregar</td>
+                    <td>tio@gmail.com`</td>
+                    <td>08122133216</td>
+                    <td>Aktif</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Andi Rendi</td>
+                    <td>andi@gmail.com`</td>
+                    <td>08312133214</td>
+                    <td>Aktif</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Ardi Reza</td>
+                    <td>reza@gmail.com`</td>
+                    <td>08552133212</td>
+                    <td>Non-Aktif</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Puan Mina</td>
+                    <td>mina@gmail.com`</td>
+                    <td>08545233219</td>
+                    <td>Aktif</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Tiur Hamidah</td>
+                    <td>midah@gmail.com`</td>
+                    <td>08199233210</td>
+                    <td>Cuti</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End Table with stripped rows -->
 
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="info-box card">
-                <i class="bi bi-geo-alt"></i>
-                <h3>Alamat</h3>
-                <p>Jl. Kuali Gg. Tertib No. 8J, Medan Petisah</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="info-box card">
-                <i class="bi bi-telephone"></i>
-                <h3>Call Us</h3>
-                <p>+62 821 6661 5433<br>+62 822 6160 6336</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="info-box card">
-                <i class="bi bi-envelope"></i>
-                <h3>Email</h3>
-                <p>metromatika@gmail.com<br>official@metromatika.com</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="info-box card">
-                <i class="bi bi-clock"></i>
-                <h3>Jam Buka</h3>
-                <p>Senin - Friday<br>07:00 wib - 23:00 wib</p>
-                <p>Sabtu - Minggu<br>07:00 wib - 20:00 wib</p>
-
-              </div>
             </div>
           </div>
 
         </div>
-
-        <div class="col-xl-6">
-          <div class="card p-4">
-            <form action="forms/contact.php" method="post" class="php-email-form">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Nama" required>
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Email" required>
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subjek" required>
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Pesan" required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Kirim Pesan</button>
-                </div>
-
-              </div>
-            </form>
-          </div>
-
-        </div>
-
       </div>
-
     </section>
 
   </main><!-- End #main -->
